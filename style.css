@@ -10,23 +10,9 @@ body {
   color: #333;
 }
 
-/* --- Navigation --- */
-nav {
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 100;
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-/* --- Hero Section --- */
+  
 .hero {
-  background-image: url('your-image.jpg'); /* Replace with your actual image path */
+  background-image: url('bg-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,19 +22,25 @@ nav ul {
   justify-content: center;
   text-align: center;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   position: relative;
 }
+ 
+}
+
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  opacity: 0.8;
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
 .hero-content {
-  position: relative;
+ 
+ position: relative;
   z-index: 1;
 }
 
