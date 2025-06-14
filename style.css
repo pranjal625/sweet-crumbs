@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff6f8;
+  color: #333;
+}
+
+/* --- Navigation --- */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background-image: url('your-image.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ff80aa;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Header --- */
+header {
+  background-color: #ffe0ec;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* --- Sections --- */
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* --- Cards --- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 0 10px #ffd6e3;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* --- Gallery --- */
+.gallery {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff0f5;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+/* --- Slider --- */
+.slider {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fcb6c2;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 2;
+}
+
+.slider .prev {
+  left: -20px;
+}
+
+.slider .next {
+  right: -20px;
+}
+
+/* --- WhatsApp Button --- */
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #ffe0ec;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .slider {
+    padding: 0 1rem;
+  }
+
+  .slider button {
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+
+  .slider-track img {
+    width: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .slider {
+    padding: 0 0.5rem;
+  }
+
+  .slider-track {
+    justify-content: center;
+  }
+
+  .slider button {
+    padding: 6px;
+    font-size: 1rem;
+  }
+
+  .slider .prev {
+    left: -10px;
+  }
+
+  .slider .next {
+    right: -10px;
+  }
+
+  .slider-track img {
+    width: 180px;
+  }
+}

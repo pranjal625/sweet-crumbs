@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Crumbs Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Optional Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Sweet Crumbs Bakery</h1>
+    <p>Handmade cakes & cookies with love 🍪</p>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>I KNOW YOU LOVE THE CAKES, WE DO TOO</h2>
+      <p>Order fresh eggless cakes & cookies — delivered With LOVE!</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="chocolate-cake-3.jpg" alt="Chocolate Cake">
+        <p>Chocolate Fudge Cake</p>
+      </div>
+      <div class="card">
+        <img src="cupcake.jpeg" alt="Cupcake">
+        <p>Vanilla Cupcakes</p>
+      </div>
+      <div class="card">
+        <img src="R.jpeg" alt="Cookies">
+        <p>Chunky Choco Cookies</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Hi, I'm Aditi — a self-taught baker from Nagpur who loves crafting sweet moments. From birthdays to bridal showers, I make your celebrations delicious!</p>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="slider">
+      <button class="prev">&#10094;</button>
+      <div class="slider-track">
+        <img src="gallery2.jpeg" alt="Cake">
+        <img src="gallery1.jpg" alt="Cupcake">
+        <img src="gallery3.jpg" alt="Cookie">
+        <img src="gallery5.jpg" alt="Cake">
+        <img src="gallery6.jpg" alt="Cupcake">
+        <img src="gallery4.jpg" alt="Cookie">
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Have a custom order in mind? Let's chat!</p>
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sweet Crumbs Bakery | Made with 💖 by Pranjal</p>
+  </footer>
+
+  <!-- Slider Script -->
+  <script>
+    const sliderTrack = document.querySelector('.slider-track');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    prevBtn.addEventListener('click', () => {
+      sliderTrack.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      sliderTrack.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
