@@ -12,13 +12,17 @@
   <!-- Header -->
   <header>
  
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#testimonials">Testimonials</a>
-    </nav>
+    <nav class="navbar">
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   
 
     <h1>Sweet Crumbs Bakery</h1>
@@ -115,6 +119,14 @@ This is actually just a demo website which shows how the website might turn out 
     nextBtn.addEventListener('click', () => {
       sliderTrack.scrollBy({ left: 320, behavior: 'smooth' });
     });
+ 
+    
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+  }
+
+
   </script>
 
 </body>

@@ -1,16 +1,9 @@
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- 
-nav a {
-      margin: 0 10px;
-      color: #3d3d3d;
-      text-decoration: none;
-      font-weight: bold;
-}
-
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -18,7 +11,67 @@ body {
   color: #333;
 }
 
-  
+/* Navbar Base */
+.navbar {
+  background-color: #ffe1e1;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5a3e2b;
+}
+
+/* Hamburger Style */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #5a3e2b;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffe1e1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
 .hero {
   background-image: url('bg-hero.jpg');
   background-size: cover;
@@ -30,25 +83,20 @@ body {
   justify-content: center;
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-  position: relative;
+   position: relative;
 }
- 
-}
-
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.8;
-  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  background: none;
   z-index: 0;
 }
 
 .hero-content {
- 
- position: relative;
+  position: relative;
   z-index: 1;
 }
 
